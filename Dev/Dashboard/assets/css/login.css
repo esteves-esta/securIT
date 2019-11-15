@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+a {
+  color: #666;
+  font-size: 14px;
+  display: block;
+}
+.logo {
+  width: 70%;
+ 
+}
+.login-title {
+  flex-basis: 100%;
+}
+#login-page {
+  display: flex;
+}
+.login {
+  width: 30%;
+  height: 100vh;
+  background: #FFF;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+.login a {
+  margin-top: 25px;
+}
+.form-login label {
+  text-align: left;
+  font-size: 13px;
+  margin-top: 5px;
+  display: block;
+  color: #666;
+}
+.input-email,
+.input-password {
+  width: 100%;
+  background: #DDD;
+  border-radius: 4px;
+  margin: 4px 0;
+  padding: 10px;
+  float: left;
+  display: flex;
+  margin-bottom: 15px;
+  
+}
+.icon {
+  padding: 4px;
+  color: #666;
+  min-width: 30px;
+  text-align: center;
+}
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  border: 0;
+  background: none;
+  font-size: 16px;
+  padding: 4px 0;
+  outline: none;
+  
+}
+input[type="submit"] {
+  width: 100%;
+  border: 0;
+  border-radius: 25px;
+  padding: 14px;
+  background: #c59220;
+  color: #FFF;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+ input:hover{
+     color: rgba(216, 203, 203, 0.829);
+ }
+.background {
+  width: 70%;
+  padding: 40px;
+  height: 100vh;
+  background: linear-gradient(60deg, rgba(11, 121, 155, 0.253), rgba(148, 130, 175, 0.37)),  url('https://www.unirede.net/wp-content/uploads/2018/11/noc-unirede-solucoes-corporativas-zabbix.png') center no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: flex-end;
+  align-content: center;
+  flex-direction: row;
+  filter: brightness(0.7);
+  -webkit-filter: brightness(0.7);
+   -moz-filter: brightness(0.7);
+    -ms-filter: brightness(0.7);
+     -o-filter: brightness(0.7);
+  
+}
+.background h1 {
+  max-width: 420px;
+  color: #FFF;
+  text-align: right;
+  padding: 0;
+  margin: 0;
+}
+.background p {
+    font-weight: bold;
+  max-width: 650px;
+  color: #DDD;
+  font-size: 15px;
+  text-align: right;
+  padding: 0;
+  margin: 15px 0 0 0;
+}
+
+a{
+    
+    text-decoration: none;
+    color: rgb(77, 70, 70);
+    font-weight: bold;
+     text-decoration: none;
+
+}
+
+a:hover{
+    color:  #c59220;
+}
+
+.alinhar{
+    display: flex;
+    flex-direction: column;
+}

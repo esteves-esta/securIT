@@ -1,0 +1,24 @@
+# User Stories 1
+
+Sou gerente de infraestrutura do prédio e preciso me asegurar que a segurança dos funcionários e das informações 
+
+# User Stories 2
+
+Eu enquanto dono de uma empresa de ti preciso assegurar a continuidade das operações da minha empresa e o sigilo de dados porque tenho obrigações legais, fiscais e segredos de negócio. 
+
+
+# User Stories 3
+
+Eu, enquanto funcionário analista de dados , preciso de um sistema versátil e fácil de utilizar para economizar tempo ao fazer as buscas e visualizar as informações de forma mais rápida
+
+# User Stories 4
+
+Eu, enquanto gerente de infraestrutura , preciso de um sistema que alerte quando os dispositivos estiverem com iminência de falhas para tomar decisões e manter o sistema em funcionamento
+
+# User Stories 5
+
+Eu, enquanto analista de dados da empresa, preciso de um sistema que apresente relatórios de uso dos equipamentos para controlar  o funcionamento dos dispositivos
+
+# User Stories 6
+
+Eu, enquanto gerente de infraestrutura, preciso de um sistema com um backup da base de dados sempre atualizado para utilizar em casos de emergência

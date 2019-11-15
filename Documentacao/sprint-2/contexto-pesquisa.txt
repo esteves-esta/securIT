@@ -1,0 +1,33 @@
+## Contexto 
+
+Canal Tech - 30 de Julho de 2016 às 18h30 
+https://canaltech.com.br/seguranca/empresas-gastam-em-media-us-914000-com-perda-de-dados-74657/
+
+ O estudo denominado Data Protection Index 2016, que entrevistou profissionais responsáveis pela TI de 2.200 organizações em 18 países, aponta que 13% mais empresas sofreram com a perda de dados em relação a dois anos atrás, ainda que os incidentes de perda de dados e interrupções tradicionais estejam diminuindo.
+
+De acordo com as informações, a perda de dados gerou um custo de, em média, US$ 914.000 por caso nos últimos 12 meses (2016).
+
+Já quanto a confiabilidade das soluções de segurança, o estudo constatou que 70% das empresas não acreditam que poderiam recuperar seus sistemas ou dados caso ocorra problemas de perda de informações ou tempo de inatividade inesperado.
+
+===
+
+Computer World - 14/06/2019
+https://computerworld.com.br/2019/06/14/como-reduzir-impacto-por-falhas-de-seguranca-em-sua-empresa/
+
+ Outro ponto preocupante é que muitas organizações não possuem ferramentas apropriadas nem pessoal capacitado para identificação e investigação de incidentes de segurança. Segundo o relatório M-Trends 2019 (Fireye), em 2018 as organizações levaram em média 78 dias apenas para detectar que foram atacadas. E, uma vez comprometidas, em 64% dos casos se tornaram alvos recorrentes de outros ataques. Os setores de finanças, educação e saúde são os mais atacados. 
+
+===
+
+33Gica = 12/04/2019
+https://33giga.com.br/7-falhas-tecnologicas-que-causaram-prejuizos-para-empresas-e-usuarios/
+
+Uma pesquisa realizada em 2018 pela Tricentis, identificou 606 falhas em sistema de 314 companhias, que impactaram 3,7 bilhões de pessoas e resultaram em US$ 1,7 trilhões em perdas financeiras.
+
+Todos os produtos digitais estão sujeitos à bugs, mas as empresas precisam garantir que a experiência de seus usuário seja o mais fluida, consistente e segura possível. Caso contrário, poderão perder clientes, receita, reputação e até mesmo valor de mercado.
+
+[...] Depois dos escândalos do vazamento dos dados, o Facebook perdeu U$13 bilhões em valor de mercado
+
+===
+
+https://seguranca.uol.com.br/antivirus/infograficos/falhas-de-seguranca-prejuizos-para-empresas.html#rmcl
+

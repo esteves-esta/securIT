@@ -1,0 +1,21 @@
+.header.active {
+    background-color: #000;
+}
+
+.header.active .navbar-nav>li>a {
+    color: #fff !important;
+}
+
+.logo-img {
+    height: 30px;
+}
+
+.navbar-header {
+    padding: 25px 0px;
+}
+
+.titulo-simulador {
+    color: #e4871a;
+    font-size: 30px;
+    
+}
