@@ -1,0 +1,462 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SecurIT - Dashboard</title>
+    <meta name="description" content="Ela Admin - HTML5 Admin Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="images/faviconSecurit.png">
+    <link rel="shortcut icon" href="images/faviconSecurit.png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/estilo.css">
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/jqvmap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/weathericons@2.1.0/css/weather-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet" />
+    <script src="../js/logout.js"></script>
+
+</head>
+
+<body>
+    <!-- Left Panel -->
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="index.html"><i class="menu-icon ti-home"></i>Dashboard </a>
+                    </li>
+                    <li>
+                        <a href="cadastroDispositivo.html"><i class="menu-icon ti-plus"></i>Cadastros </a>
+                    </li>
+                    <li>
+                        <a href="consultaSistemas.html"><i class="menu-icon ti-search"></i>Sistemas </a>
+                    </li>
+                    <li>
+                        <a href="alertas.html"><i class="menu-icon ti-alert"></i>Alertas </a>
+                    </li>
+                    <li>
+                        <a href="configuracoes.html"><i class="menu-icon  ti-settings "></i>Configurações </a>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </aside>
+    <!-- /#left-panel -->
+    <!-- Right Panel -->
+    <div id="right-panel" class="right-panel">
+        <!-- Header-->
+        <header id="header" class="header">
+            <div class="top-left">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"></a>
+                    <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>
+                    <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
+                </div>
+            </div>
+            <div class="top-right">
+                <div class="header-menu">
+                    <div class="header-left">
+
+                        <!-- <div class="dropdown for-notification">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="notification"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-bell"></i>
+                                <span class="count bg-danger">3</span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="notification">
+                                <p class="red">Você possui 2 notificações</p>
+                                <a class="dropdown-item media" href="#">
+                                    <i class="fa fa-check"></i>
+                                    <p> CPU dispositivo #1 status ok .</p>
+                                </a>
+                                <a class="dropdown-item media" href="#">
+                                    <i class="fa fa-warning"></i>
+                                    <p>Memória do Dispositivo #2 está sobrecarregando.</p>
+                                </a>
+
+                            </div>
+                        </div>
+ -->
+
+                    </div>
+
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="images/admin1.jpg" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                            <a class="nav-link" onclick="logoff()"><i class="fa fa-power -off"></i>Logout</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <!-- /#header -->
+        <!-- Content -->
+        <div class="content">
+            <!-- Animated -->
+            <div class="animated fadeIn">
+
+                <div class="mb-5">
+                    <div class="p-0 page-header page-title">
+                        <h1 class="title-bold" id="empresa"></h1>
+                        <p id="dataHora"></p>
+                    </div>
+                </div>
+
+                <div class="card" id="vazio" style="display: none">
+                    <div class="card-body">
+                        <h4 class="title-bold">
+                            Por favor cadastre um sistema para ser
+                            gerenciado.
+                        </h4>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="mb-4">
+                            <h1 class="card-title titulo-card">STATUS DOS SISTEMAS</h1>
+                        </div>
+
+
+                        <div id="cardSistemas">
+
+                        </div>
+
+
+
+                    </div>
+
+
+                    <div class="col-lg-6">
+                        <div class="mb-4">
+                            <h1 class="card-title titulo-card">UTILIZAÇÃO</h1>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+
+                                <div class="row mb-5">
+                                    <div class="col-lg-12">
+                                        <select name="sistemasescolha" id="sistemasescolha" onchange="consultar()">
+
+                                        </select>
+                                    </div>
+
+                                    <!-- <div class="col-lg-5">
+                                        <select name="sistemas-escolha" id="sistemas-escolha">
+                                            <option disabled selected>Escolha o período do gráfico</option>
+                                            <option value="Alarmes">Diário</option>
+                                            <option value="Cameras">Semanal</option>
+                                            <option value="Biometria">Mensal</option>
+                                        </select>
+                                    </div> -->
+                                </div>
+
+                                <canvas id="singelBarChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- .animated -->
+        </div>
+        <!-- /.content -->
+        <div class="clearfix"></div>
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-inner bg-white">
+                <div class="row">
+                    <div class="col-sm-6">
+                        Copyright &copy; 2019 securIT
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- /.site-footer -->
+    </div>
+    <!-- /#right-panel -->
+
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!--  Chart js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.bundle.min.js"></script>
+    <!-- <script src="assets/js/init/chartjs-init.js"></script> -->
+
+
+    <script>
+
+        verificarAutenticacao();
+
+        function abrirDetalhes(codigo) {
+            sessionStorage.codigo_sistema = codigo;
+            location.href = 'sistemaDetalhes.html';
+        }
+
+        jQuery(document).ready(function ($) {
+            var empresaNome = sessionStorage.empresa;
+            var representanteNome = sessionStorage.name;
+            empresa.innerHTML = `${empresaNome} - <span class="subtitulo" > Representante ${representanteNome}</span >`;
+            var hora = new Date();
+            dataHora.innerHTML = `Atualizado em ${hora.getHours()}:${hora.getMinutes()}`;
+
+            consultarSistema();
+
+        });
+
+
+        function numsAleatorios(x) {
+            for (i = 0; i < 10; i++) {
+                x.push(Math.floor(Math.random() * (100 - 80)) + 80);
+            }
+        }
+
+        function labelsAleatorios(x) {
+            var dados = ['CPU', 'RAM', 'HD'];
+            for (i = 0; i < 10; i++) {
+                x.push(dados[Math.floor(Math.random() * 3)] + ' ' + Math.floor(Math.random() * 3) + 1);
+            }
+        }
+
+        function plotarGrafico(nomesistema) {
+            var ctx = document.getElementById("singelBarChart");
+            ctx.width = 500;
+            ctx.height = 500;
+
+            if (historico.length == 0) {
+                numsAleatorios(historico);
+            }
+            if (labelsDados.length == 0) {
+                labelsAleatorios(labelsDados);
+            }
+
+            var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labelsDados,
+                    datasets: [
+                        {
+                            label: nomesistema,
+                            data: historico,
+                            borderColor: "#fdb416",
+                            borderWidth: "2",
+                            backgroundColor: "rgba(253, 180, 22, 0.27)",
+
+                        }
+                    ]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+        }
+
+        function consultar() {
+            var sisEscolhido = sistemasescolha.options[sistemasescolha.selectedIndex].text;
+            consultarHistorico(sistemasescolha.value, sisEscolhido);
+        }
+
+        var historico = [];
+        var labelsDados = [];
+        function consultarHistorico(idsistema, nomesistema) {
+            historico = [];
+            labelsDados = [];
+            console.log(idsistema);
+            console.log(nomesistema);
+            console.log('asdfsadf');
+
+            var info = {
+                codigosistema: idsistema,
+            };
+
+            var corpo = new URLSearchParams(info);
+
+            fetch("../consultaUser/consultaMaiorUtilizacao", {
+                method: "POST",
+                body: corpo
+            }).then(function (resposta) {
+
+
+                resposta.json().then(function (rer) {
+                    for (r = 0; r < rer.length; r++) {
+                        var atual = rer[r];
+                        historico.push(atual.value);
+
+                        labelsDados.push(atual.name);
+                    }
+
+                    plotarGrafico(nomesistema);
+                }
+                );
+            });
+
+
+        }
+
+        var sistemas = [];
+        var sistemaPrimeiroNome = '';
+
+        function consultarSistema() {
+
+            var cdCliente = { idCliente: sessionStorage.idClient }
+
+            var corpo = new URLSearchParams(cdCliente);
+            fetch("../consultaUser", {
+                method: "POST",
+                body: corpo
+            }).then(function (resposta) {
+
+                resposta.json().then(function (rer) {
+
+                    sistemas = rer;
+                    sistemaPrimeiroNome = rer[0].name;
+                    var conteudoComboBox = '<option disabled selected>Escolha um sistema</option>';
+                    for (r = 0; r < rer.length; r++) {
+                        var atual = rer[r];
+
+                        conteudoComboBox += `<option value="${atual.idServer}">${atual.name}</option>`;
+                    }
+                    sistemasescolha.innerHTML = conteudoComboBox;
+                    sistemasescolha.style.width = '100%';
+
+                    sistemasDis();
+
+                }
+                );
+            });
+
+
+        }
+
+
+        function sistemasDis() {
+
+            var cdCliente = { idCliente: sessionStorage.idClient }
+
+            var corpo = new URLSearchParams(cdCliente);
+            fetch("../consultaUser/consultaTotalDispositivos", {
+                method: "POST",
+                body: corpo
+            }).then(function (resposta) {
+
+                if (resposta.ok) {
+                    resposta.json().then(function (rer) {
+
+                        var conteudoCards = '';
+
+                        for (r = 0; r < sistemas.length; r++) {
+                            var atual = sistemas[r];
+                            var dispositivoTotal = 0;
+
+                            for (i = 0; i < rer.length; i++) {
+                                if (rer[i].idServer == atual.idServer) {
+                                    dispositivoTotal = rer[i].totalDevices;
+                                    break;
+                                    console.log(rer[i].totalDevices);
+                                    console.log(rer[i].idServer);
+                                    console.log(atual.idServer);
+                                }
+                            }
+
+                            conteudoCards += `
+                                <a class="detalhesOff">
+                                    <div class="card borda-esq mb-3">
+                                        <div class="card-body linha">
+                                            <h4 class="titulo-sistemas">
+                                                <span class="dispositivos-total">${dispositivoTotal}</span>
+                                                ${atual.name}
+                                                        </h4>
+
+                                            <div>
+                                                <span class="status-dispositivo on mr-3">
+                                                    <span id="dispositivos-on">${dispositivoTotal}</span>
+                                                    <span id="dispositivos-off">ON</span>
+                                                </span>
+
+                                                <span class="status-dispositivo off">
+                                                    <span id="dispositivos-on">0</span>
+                                                    <span id="dispositivos-off">OFF</span>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12 p-3 infoSistema">
+
+                                            <button class="btn btn-outline-warning mb-2"
+                                                onclick="abrirDetalhes(${atual.idServer})">Detalhes</button>
+                                        </div>
+                                    </div>
+                                </a>
+                                `;
+                        }
+                        cardSistemas.innerHTML = conteudoCards;
+
+                        $('.detalhesOff').each(function () {
+
+                            $(this).on('click', function (event) {
+                                $(this).children().find('.infoSistema').toggle();
+                                console.log($(this).children().find('.infoSistema'));
+                            });
+                        });
+
+                        consultarHistorico(sistemas[0].idServer, sistemaPrimeiroNome);
+                    });
+                } else {
+                    vazio.style.display = "block";
+
+                }
+            });
+        }
+
+
+
+
+    </script>
+
+    <!-- Start of securithelp Zendesk Widget script -->
+    <script id="ze-snippet"
+        src="https://static.zdassets.com/ekr/snippet.js?key=2f1c47af-6ca3-4ce8-9188-958944ef0eb5"> </script>
+    <!-- End of securithelp Zendesk Widget script -->
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+{
+	"database": {
+		"server": "servidorgrupo8.database.windows.net",
+		"user": "securit",
+		"password": "#Gfgrupo8",
+		"database": "grupo8bd",
+		"options": {
+			"encrypt": true
+		}
+	},
+	"security":{
+		"key": "CHAVE_SEGURANCA"
+	}
+}
