@@ -1,0 +1,9 @@
+se aumentar o total de dispositivo,aumenta o consulmo de memoria?
+
+se aumentar o total de cameras, diminui o prazo de memoria?
+
+
+quanto maior o total de dispositivos, maior ou menor o aumento de cpu do sistema?
+
+
+
