@@ -1,0 +1,7 @@
+Após abrir o projeto 'securit' no netbeans deve ser o comando 'build with dependencies'. Após o comando finalizar você pode verificar na janela output se o build teve sucesso, e também mostrará que foi criado um arquivo jar tanto na pasta 
+
+'C:\Users\SEU USUÁRIO\.m2\repository\com\mycompany\securit\1.0-SNAPSHOT' 
+
+e também na pasta do projeto 'Projeto Java\securit\target'.
+
+Em ambas as pasta existirá dois arquivos '.jar' clique no arquivo 'securit-1.0-SNAPSHOT-jar-with-dependencies.jar' para executar o projeto.
