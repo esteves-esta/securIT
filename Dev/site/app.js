@@ -18,6 +18,7 @@ var loginRouter = require('./routes/login');
 var dashPingRouter = require('./routes/dashPing');
 var excluirRouter = require('./routes/excluir');
 var alterarRouter = require('./routes/alterar');
+var emailRouter = require('./routes/email');
 
 var app = express();
 
@@ -42,6 +43,7 @@ app.use('/dashPing', dashPingRouter);
 app.use('/excluir', excluirRouter);
 app.use('/alterar', alterarRouter);
 app.use('/login', loginRouter);
+app.use('/email', emailRouter);
 
 
 

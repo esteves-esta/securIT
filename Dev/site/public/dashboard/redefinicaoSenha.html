@@ -10,19 +10,27 @@
     <link rel="stylesheet" href="assets/css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- AJAX -- biblioteca usada para enviar formulario ou coisas do frontend pro backend - PEGUEI NO W3SCHOOLS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!-- CSS stylesheet -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- biblioteca Swall - alerts-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <body>
     <div id="login-page">
         <div class="login">
             <img src="images/logo.png" alt="logo SecurIT" class="logo">
-            <h2 class="login-title">Redefinição de Senha</h2>
-            <form class="form-login">
+            <h2 class="login-title">Redefinir Senha</h2>
+            <form id="redefinir" class="form-login">
                 <label for="email">E-mail</label>
+
                 <div class="input-email">
-                    <i class="fa fa-envelope icon"></i>
-                    <input type="email" name="email" placeholder="Informe o e-mail">
+                    <!-- <i class="fa fa-envelope icon"></i> -->
+                    <input class="form-control" id="email" type="email" name="email" placeholder="Informe o e-mail">
                 </div>
-                <input type="submit" value="Enviar email de redefinição de senha">
+                <input type="submit" onclick="validar(event)" value="Enviar E-mail">
             </form>
             <div class="alinhar">
                 <a href="login.html">Login</a>
@@ -45,3 +53,60 @@
 </body>
 
 </html>
+
+<script>
+
+    function validar(e) {
+        e.preventDefault();
+        if (email.value == "" || email.value.indexOf('@') == -1 || email.value.indexOf('.com') == -1) {
+            swal({
+                icon: "error",
+                title: `Por Favor, Insira Seu Email!`
+            });
+        } else {
+            esqueciSenha();
+            console.log("caiu no else");
+        }
+    }
+
+    // else if (redefinir.email.value == "" || redefinir.email.value.indexOf('@') == -1 || redefinir.email.value.indexOf('.com') == -1) {
+    //     swal({
+    //         icon: "error",
+    //         title: `Por Favor, Insira um Email válido!`
+    //     });
+    // } 
+
+    function esqueciSenha() {
+        console.log("chama redefinir");
+        var formRedefinir = $("#redefinir").serialize();
+        console.log(formRedefinir);
+      
+        $.ajax({
+            url: "../email/enviarEmail",
+            type: 'post',
+            data: formRedefinir
+        }).done(function (response) {
+            console.log(response);
+
+            if (response) {
+                swal({
+                    icon: "success",
+                    title: 'Sucesso',
+                    text: `Enviamos um Email de Redefinição de Senha para seu E-mail!`,
+                }); consultarEmail();
+            } else {
+                console.log('Não deu!');
+                swal({
+                    icon: "error",
+                    title: `Por Favor, Insira Seu Email!`
+                });
+
+            }
+        });
+
+        return false;
+    }
+
+
+
+</script>

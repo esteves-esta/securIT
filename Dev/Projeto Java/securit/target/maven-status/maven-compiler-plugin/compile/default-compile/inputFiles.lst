@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 E:\ARQUIVOS\2-sem\projeto-inovacao\securIT\Dev\Projeto Java\securit\src\main\java\securit\slack\SlackMessage.java
 E:\ARQUIVOS\2-sem\projeto-inovacao\securIT\Dev\Projeto Java\securit\src\main\java\securit\slack\SlackEmoji.java
 E:\ARQUIVOS\2-sem\projeto-inovacao\securIT\Dev\Projeto Java\securit\src\main\java\securit\telas\Dashboard.java
@@ -13,19 +12,3 @@ E:\ARQUIVOS\2-sem\projeto-inovacao\securIT\Dev\Projeto Java\securit\src\main\jav
 E:\ARQUIVOS\2-sem\projeto-inovacao\securIT\Dev\Projeto Java\securit\src\main\java\securit\graficos\Graph.java
 E:\ARQUIVOS\2-sem\projeto-inovacao\securIT\Dev\Projeto Java\securit\src\main\java\securit\database\DadosConexao.java
 E:\ARQUIVOS\2-sem\projeto-inovacao\securIT\Dev\Projeto Java\securit\src\main\java\securit\logs\Log.java
-=======
-/home/estagiario/Área de Trabalho/securIT/Dev/Projeto Java/securit/src/main/java/securit/database/Banco.java
-/home/estagiario/Área de Trabalho/securIT/Dev/Projeto Java/securit/src/main/java/securit/graficos/Graph.java
-/home/estagiario/Área de Trabalho/securIT/Dev/Projeto Java/securit/src/main/java/securit/database/DadosConexao.java
-/home/estagiario/Área de Trabalho/securIT/Dev/Projeto Java/securit/src/main/java/securit/oshi/Monitoracao.java
-/home/estagiario/Área de Trabalho/securIT/Dev/Projeto Java/securit/src/main/java/securit/oshi/Sistema.java
-/home/estagiario/Área de Trabalho/securIT/Dev/Projeto Java/securit/src/main/java/securit/oshi/Components.java
-/home/estagiario/Área de Trabalho/securIT/Dev/Projeto Java/securit/src/main/java/securit/logs/Log.java
-/home/estagiario/Área de Trabalho/securIT/Dev/Projeto Java/securit/src/main/java/securit/slack/SlackEmoji.java
-/home/estagiario/Área de Trabalho/securIT/Dev/Projeto Java/securit/src/main/java/securit/slack/SlackMessage.java
-/home/estagiario/Área de Trabalho/securIT/Dev/Projeto Java/securit/src/main/java/securit/telas/Processos.java
-/home/estagiario/Área de Trabalho/securIT/Dev/Projeto Java/securit/src/main/java/securit/logs/Diretorio.java
-/home/estagiario/Área de Trabalho/securIT/Dev/Projeto Java/securit/src/main/java/securit/logs/Arquivo.java
-/home/estagiario/Área de Trabalho/securIT/Dev/Projeto Java/securit/src/main/java/securit/telas/Login.java
-/home/estagiario/Área de Trabalho/securIT/Dev/Projeto Java/securit/src/main/java/securit/telas/Dashboard.java
->>>>>>> ac88a10d22a505f5e47777af1860d69694fa67bb
