@@ -40,7 +40,7 @@ function cadastrarDevice(name, description, model, nomeSistema, res, idCliente, 
                                     sistema = r;
                                     console.log("Sistema cadastrado " + sistema)
 
-                                    var stringSql = `insert into Device (name, description, model, fk_type, fk_server, fk_status) values ('${name}', '${description}', '${model}', ${type} , '${idSistema}', 1)`;
+                                    var stringSql = `insert into Device (name, description, model, fk_type, fk_server, fk_status) values ('${name}', '${description}', '${model}', ${type} , '${sistema}', 1)`;
                                     Database.query(stringSql).then(resultado => {
                                         res.status(200).send("ok");
 
@@ -176,5 +176,6 @@ router.post('/alterar', (req, res, next) => {
 
         });
 });
+
 
 module.exports = router;

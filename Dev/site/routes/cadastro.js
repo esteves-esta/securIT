@@ -11,14 +11,16 @@ router.post('/', (req, res, next) => {
     var empresa = req.body.nomeEmpresa;
     var cnpj = req.body.cnpj
     var email = req.body.email;
+    var telefone = req.body.telEmpresa;
     var senha = req.body.senha;
 
-    console.log(representante, empresa, cnpj, email, senha);
+    console.log(representante, empresa, cnpj, email, telefone, senha);
 
-    cadastro(representante, empresa, cnpj, email, senha, res);
+    cadastro(representante, empresa, cnpj, email, telefone, senha, res);
 });
 
-function cadastro(name, compName, cnpj, email, pswd, res) {
+//FUNÇÃO PRA CADASTRAR EMPRESA 
+function cadastro(representante, empresa, cnpj, email, telefone, senha, res) {
 
     verificar(cnpj, email).then(resultado => {
 
@@ -26,12 +28,14 @@ function cadastro(name, compName, cnpj, email, pswd, res) {
         console.log(`criar: ${criar}`);
 
         if (criar) {
-            var stringSql = `insert into Client (name, compName, cnpj, email, pswd) values ('${name}', '${compName}', '${cnpj}', '${email}', '${pswd}')`;
+            var stringSql = `insert into Client (name, compName, cnpj, email,phone, pswd) values ('${representante}', '${empresa}', '${cnpj}', '${email}','${telefone}', '${senha}')`;
 
 
             Database.query(stringSql).then(resultado => {
                 res.status(200).send("ok");
                 console.log("Empresa Cadastrada!");
+            }).catch(error => {
+                reject(error);
             });
         } else {
             res.status(200).send("Não Ok")
@@ -40,8 +44,7 @@ function cadastro(name, compName, cnpj, email, pswd, res) {
 }
 
 
-//Função que verifica se o e-mail já esta cadastrado no Banco de Dados
-
+//FUNCAO PRA VERIFICAR SE CNPJ OU EMAIL JA ESTÁ CADSTRADO
 function verificar(cnpj, email) {
 
     // A seguinte string  'stringSql' verifica se existe algum email ou cnpj que seja igual ao que o usuário está tentanto criar
@@ -58,5 +61,7 @@ function verificar(cnpj, email) {
         });
     });
 }
+
+
 
 module.exports = router;
