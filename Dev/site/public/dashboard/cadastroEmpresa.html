@@ -53,6 +53,13 @@
                     <input class="form-control" type="email" name="email" id="email" placeholder="Email">
                 </div>
 
+                <label for="telEmpresa">Telefone</label>
+                <div class="input-text">
+                    <i class="fa fa-phone icon"></i>
+                    <input class="form-control" type="tel" name="telEmpresa" id="telEmpresa"
+                        pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" placeholder="(11)4002-8922">
+                </div>
+
                 <label for="password">Senha</label>
                 <div class="input-password">
                     <i class="fa fa-lock icon"></i>
@@ -118,7 +125,47 @@
             nomeRepresentante.focus();
             return false;
 
-        } else if (form.email.value == "" || form.email.value.indexOf('@') == -1 || form.email.value.indexOf('.com') == -1) {
+        } else if (cnpj == "00000000000000" ||
+            cnpj == "11111111111111" ||
+            cnpj == "22222222222222" ||
+            cnpj == "33333333333333" ||
+            cnpj == "44444444444444" ||
+            cnpj == "55555555555555" ||
+            cnpj == "66666666666666" ||
+            cnpj == "77777777777777" ||
+            cnpj == "88888888888888" ||
+            cnpj == "99999999999999") {
+
+            swal({
+                title: "Atenção!",
+                text: "CNPJ Inválido!",
+                type: "warning",
+                confirmButtonClass: "btn-danger",
+                closeOnConfirm: false,
+                dangerMode: true,
+                confirmButtonClass: "btn-danger",
+                closeOnClickOutside: true,
+            });
+            cnpj.value = "";
+            cnpj.focus();
+            return false;
+        }  // else if (cnpj.value < 14 || cnpj.value > 14) {
+        //     swal({
+        //         title: "Atenção!",
+        //         text: "CNPJ precisa ter 14 dígitos!",
+        //         type: "warning",
+        //         confirmButtonClass: "btn-danger",
+        //         closeOnConfirm: false,
+        //         dangerMode: true,
+        //         confirmButtonClass: "btn-danger",
+        //         closeOnClickOutside: true,
+        //     });
+        //     cnpj.value = "";
+        //     cnpj.focus();
+        //     return false;
+
+        //  } 
+        else if (form.email.value == "" || form.email.value.indexOf('@') == -1 || form.email.value.indexOf('.com') == -1) {
             swal({
                 title: "Aviso",
                 text: "Insira um E-MAIL válido!",
@@ -145,6 +192,7 @@
             form.senha.focus();
             return false;
         } else {
+
             cadastrar();
             swal({
                 title: "Aguarde...",
@@ -153,42 +201,45 @@
                 closeOnClickOutside: false,
             });
         }
+
+
+        //Função pra enviar os dados do formulário para o cadastro.js e  retornar a resposta
+        function cadastrar() {
+
+            swal({
+                title: "Aguarde...",
+                text: "alguns instantes enquanto o cadastro é realizado",
+                buttons: false,
+                closeOnClickOutside: false,
+            });
+            var dados = $("#form").serialize();
+            console.log(dados); //pra mostrar os dados do form no console.
+            console.log("Chegou no metodo cadastrar");
+
+            $.ajax({
+                url: "../cadastro",
+                type: 'post',
+                data: dados
+
+            }).done(function (resposta) {
+                console.log("res OK");
+                if (resposta == "ok") {
+
+                    //sessionStorage.sistema = resposta[0].server;
+                    window.location = "login.html";
+                } else {
+                    swal({
+                        title: "Aviso!",
+                        type: "warning",
+                        dangerMode: true,
+                        text: "O CNPJ e/ou o EMAIL já está cadastrado no sistema!",
+                        closeOnClickOutside: true,
+                    });
+                }
+            });
+        }
     }
 
-
-    //Função pra enviar os dados do formulário para o cadastro.js e  retornar a resposta
-    function cadastrar() {
-
-        swal({
-            title: "Aguarde...",
-            text: "alguns instantes enquanto o cadastro é realizado",
-            buttons: false,
-            closeOnClickOutside: false,
-        });
-        var dados = $("#form").serialize();
-        console.log(dados); //pra mostrar os dados do form no console.
-        console.log("Chegou no metodo cadastrar");
-
-        $.ajax({
-            url: "../cadastro",
-            type: 'post',
-            data: dados
-
-        }).done(function (resposta) {
-            console.log("res OK");
-            if (resposta == "ok") {
-                window.location = "login.html";
-            } else {
-                swal({
-                    title: "Aviso!",
-                    type: "warning",
-                    dangerMode: true,
-                    text: "O CNPJ e/ou o EMAIL está cadastrado no sistema!",
-                    closeOnClickOutside: true,
-                });
-            }
-        });
-    }
 </script>
 
 

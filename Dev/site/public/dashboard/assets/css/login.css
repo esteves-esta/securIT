@@ -64,12 +64,9 @@ a {
 input[type="email"],
 input[type="password"] {
   width: 100%;
-  border: 0;
-  background: none;
   font-size: 16px;
-  padding: 4px 0;
   outline: none;
-  
+  border: none;
 }
 button{
   width: 100%;
@@ -105,21 +102,28 @@ input[type="submit"] {
   width: 70%;
   padding: 40px;
   height: 100vh;
-  background: linear-gradient(60deg, rgba(11, 121, 155, 0.253), #060606),  
-        url('https://www.unirede.net/wp-content/uploads/2018/11/noc-unirede-solucoes-corporativas-zabbix.png') center no-repeat;
+  background: url(../../images/monitoracao.png) center no-repeat;
   background-size: cover;
+  height: 55vw;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
   justify-content: flex-end;
   align-content: center;
   flex-direction: row;
-  filter: brightness(0.7);
-  -webkit-filter: brightness(0.7);
-   -moz-filter: brightness(0.7);
-    -ms-filter: brightness(0.7);
-     -o-filter: brightness(0.7);
+  filter:drop-shadow(0.1);
+   /* filter: brightness(0.8); 
+  -webkit-filter: brightness(0.8);
+   -moz-filter: brightness(0.8);
+    -ms-filter: brightness(0.8);
+     -o-filter: brightness(0.8); */
   
+}
+/* .slide {
+  height: 100vh;
+} */
+::-webkit-scrollbar {
+  width: 0px;
 }
 .background h1 {
   max-width: 420px;
@@ -127,12 +131,13 @@ input[type="submit"] {
   text-align: right;
   padding: 0;
   margin: 0;
+  font-size: xx-large;
 }
 .background p {
-    font-weight: bold;
+  
   max-width: 650px;
   color: #DDD;
-  font-size: 15px;
+  font-size: unset;
   text-align: right;
   padding: 0;
   margin: 15px 0 0 0;

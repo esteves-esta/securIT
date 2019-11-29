@@ -23,7 +23,27 @@ router.post('/consultarDispositivo', (req, res, next) => {
     });
 });
 
+router.post('/consultarEmpresa', (req, res, next) => {
+    var cdCliente = req.body.idCliente;
+    console.log(cdCliente);
+    // var idClient = req.body.idCliente;
 
+
+    let querystring = `SELECT * FROM Client where idClient = ${cdCliente};`;
+    return new Promise((resolve, reject) => {
+        Database.query(querystring).then(results => {
+
+            let existe = results.recordsets[0];
+
+            resolve(existe);
+            console.log(results);
+            res.send(results.recordset);
+        }).catch(error => {
+            reject(error);
+        });
+    });
+
+});
 
 
 module.exports = router;

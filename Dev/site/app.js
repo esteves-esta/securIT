@@ -7,6 +7,7 @@ var logger = require('morgan');
 //NÃO ESQUECER DE REGISTRAR ODAS AS ROTAS AQUI
 
 var cadastroRouter = require('./routes/cadastro');
+var alterarClienteRouter = require('./routes/alterarEmpresa');
 //var loginRouter = require('./routes/login');
 var cadastroDispositivoRouter = require('./routes/cadastroDispositivo');
 var consultaUserRouter = require('./routes/consultaUser');
@@ -31,6 +32,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/cadastro', cadastroRouter);
+app.use('/alterarEmpresa', alterarClienteRouter);
 app.use('/cadastroDispositivo', cadastroDispositivoRouter);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

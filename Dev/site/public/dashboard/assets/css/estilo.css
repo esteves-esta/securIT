@@ -127,7 +127,7 @@
 
 .openGraph:hover .card, 
 .activeCard {
-    border: 2px solid #c7911d87 !important;
+    border: 2px solid #c7911d87;
     transition: all ease .3s;
 }
 
