@@ -1,10 +1,9 @@
 * {
   box-sizing: border-box;
-}
-body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Arial'
 }
+
 a {
   color: #666;
   font-size: 14px;
@@ -12,26 +11,71 @@ a {
 }
 .logo {
   width: 70%;
- 
 }
 .login-title {
   flex-basis: 100%;
 }
 #login-page {
   display: flex;
+  flex-direction: row;
+  height: 100vh;
 }
+
+
 .login {
   width: 30%;
-  height: 100vh;
   background: #FFF;
   padding: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  align-content: center;
   text-align: center;
 }
+
+.background {
+  width: 70%;
+  padding: 40px;
+  background: linear-gradient(60deg, rgba(11, 121, 155, 0.253), #060606), 
+  url(../../images/monitoracao.png) center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  filter:drop-shadow(0.1);
+}
+
+	@media only screen and (max-width: 1000px) {
+    /*CELULARES*/
+  .login, .background  {
+    width: 50%;
+  }
+}
+
+	@media only screen and (max-width: 650px) {
+    /*CELULARES*/
+    
+    .login, .background  {
+      width: 100%;
+    }
+    .logo {
+      width: 30%;
+    }
+    #login-page {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    .background {
+      order: 1;
+    }
+
+    .login {
+      order: 2;
+    }
+}
+
 .login a {
   margin-top: 25px;
 }
@@ -68,6 +112,7 @@ input[type="password"] {
   outline: none;
   border: none;
 }
+
 button{
   width: 100%;
   border: 0;
@@ -81,13 +126,17 @@ button{
   font-size: 16px;
   font-weight: bold;
   margin-top: 10px;
-
 }
+
+#formlogin, 
 input[type="submit"] {
-  width: 70%;
+  width: 300px;
+}
+
+input[type="submit"] {
   border: 0;
-  border-radius: 25px;
-  padding: 14px;
+  border-radius: 6px;
+  padding: 12px;
   background: #c59220;
   color: #FFF;
   display: inline-block;
@@ -98,65 +147,41 @@ input[type="submit"] {
 }
 
 
-.background {
-  width: 70%;
-  padding: 40px;
-  height: 100vh;
-  background: url(../../images/monitoracao.png) center no-repeat;
-  background-size: cover;
-  height: 55vw;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  justify-content: flex-end;
-  align-content: center;
-  flex-direction: row;
-  filter:drop-shadow(0.1);
-   /* filter: brightness(0.8); 
-  -webkit-filter: brightness(0.8);
-   -moz-filter: brightness(0.8);
-    -ms-filter: brightness(0.8);
-     -o-filter: brightness(0.8); */
-  
-}
-/* .slide {
-  height: 100vh;
-} */
+
 ::-webkit-scrollbar {
   width: 0px;
 }
 .background h1 {
-  max-width: 420px;
   color: #FFF;
   text-align: right;
   padding: 0;
   margin: 0;
   font-size: xx-large;
+  font-weight: 800;
+  padding-bottom: 25px;
 }
 .background p {
-  
-  max-width: 650px;
   color: #DDD;
   font-size: unset;
   text-align: right;
   padding: 0;
-  margin: 15px 0 0 0;
+  line-height: 1.5em
 }
 
 a{
-    
     text-decoration: none;
     color: rgb(77, 70, 70);
     font-weight: bold;
-     text-decoration: none;
-
+    text-decoration: none;
 }
 
 a:hover{
     color:  #c59220;
+    text-decoration: none;
 }
 
 .alinhar{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }

@@ -127,8 +127,19 @@
 
 .openGraph:hover .card, 
 .activeCard {
-    border: 2px solid #c7911d87;
     transition: all ease .3s;
+    transform: scale(1.07);
+    border: 2px solid #a6a6a6 !important;
+}
+
+.redCard {
+    box-shadow: 0 0 10px 0.1px
+    rgba(223, 0, 0, 0.61) !important;
+}
+
+.attentionCard {
+    box-shadow: 0 0 10px 0.1px
+    rgba(255, 106, 17, 0.61) !important;
 }
 
 .openGraph .card{
