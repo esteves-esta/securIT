@@ -19,7 +19,7 @@ router.post('/', (req, res, next) => {
 
 function cadastrarDevice(name, description, model, nomeSistema, res, idCliente, tipoDispositivo, idSistema) {
 
-    verificarIdDevice(name)
+    verificarIdDevice(name, idCliente)
         .then(resultado => {
             let criar = !resultado;
 
@@ -130,9 +130,10 @@ function adicionarServidor(name, idClient) {
 }
 
 //FUNÇÃO QUE VERIFICA SE O DISPOSITIVO JÁ ESTÁ CADASTRADO NO SISTEMA
-function verificarIdDevice(name) {
+function verificarIdDevice(name, idCliente) {
 
-    let querystring = `Select * from Device where name = '${name}'`;
+    let querystring = `Select * from Device as d inner join Server as s on idServer = fk_server 
+    where fk_client = ${idCliente} and d.name = '${name}'`;
     return new Promise((resolve, reject) => {
         Database.query(querystring).then(results => {
 
