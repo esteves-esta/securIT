@@ -37,26 +37,6 @@ async function consultarSituaçãoAtual() {
 
 }
 
-function chamarMudaCor() {
-    mudarCor(cpuValue, cardCpu);
-    mudarCor(memoriaValue, cardMemoria);
-    mudarCor(hdValue, cardDisco);
-}
-
-function mudarCor(comp, divcomp) {
-    if (parseFloat(comp.innerHTML) > 90) {
-        divcomp.style.border = "2px solid red";
-    } else {
-
-        if (divcomp.className.includes('activeCard')) {
-            divcomp.style.border = "2px solid  #c7911d87";
-        } else {
-            divcomp.style.border = "2px solid  #fff";
-        }
-    }
-}
-
-
 async function verComponentes() {
     try {
 
