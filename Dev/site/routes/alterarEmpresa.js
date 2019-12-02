@@ -31,17 +31,20 @@ function updateEmpresa(idClient, representante, empresa, cnpj, email, telefone, 
     });
 
 }
-//FUNÇÃO PRA CARREGAR OS DADOS NA TBELA
-function carregaTabela(selecionado, res) {
+// //FUNÇÃO PRA CARREGAR OS DADOS NA TBELA
+// function carregaTabela(selecionado, res) {
 
-    let querystring = `UPDATE FROM Server where idSever = ${selecionado}`;
-    return new Promise((resolve, reject) => {
-        Database.query(querystring).then(results => {
+//     let querystring = `UPDATE FROM Server where idSever = ${selecionado}`;
+//     return new Promise((resolve, reject) => {
+//         Database.query(querystring).then(results => {
 
-            res.sendStatus(201);
-        }).catch(error => {
-            res.status(500).send(error);
-        });
-    });
-}
+//             res.sendStatus(201);
+//         }).catch(error => {
+//             res.status(500).send(error);
+//         });
+//     });
+// }
+
+
+
 module.exports = router;

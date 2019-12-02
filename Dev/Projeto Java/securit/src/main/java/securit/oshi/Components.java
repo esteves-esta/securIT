@@ -157,7 +157,7 @@ public class Components {
     }
     
     public Color validateMemory(Integer memory){
-        if(memory > 3){
+        if(memory > 85){
             mensagem.sendMessage(
                     String.format("Memória do sistema %s está em %d%% ", sistema, memory),
                     SlackEmoji.EMOJI_ATTENTION);

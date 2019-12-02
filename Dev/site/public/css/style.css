@@ -17,5 +17,44 @@
 .titulo-simulador {
     color: #e4871a;
     font-size: 30px;
-    
+}
+#logo2
+{
+opacity:1.0;
+
+}
+#logo2:hover{
+opacity: 0.4;
+
+}
+
+#logo3
+{
+opacity:0.4;
+
+}
+#logo3:hover{
+opacity: 1.0;
+
+}
+
+
+
+#texto
+{
+opacity:1.0;
+
+}
+#texto:hover{
+opacity: 0.5;
+
+}
+
+#button
+{
+opacity:1.0;
+
+}
+#button:hover{
+opacity: 0.7;
 }

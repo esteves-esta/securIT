@@ -81,15 +81,22 @@
 }
 
 .titulo-sistemas {
-    font-size: 1.4em !important;
+    font-size: 1.2em !important;
 }
 
 .status-dispositivo {
     padding: 5px 25px;
-    font-size: 1em;
+    font-size: 0.9em;
     font-weight: 700;
     color: #fff;
     border-radius: 100px;
+}
+
+@media only screen and (max-width: 650px) {
+    /*CELULARES*/
+    .titulo-sistemas {
+        font-size: 1em !important;
+    }
 }
 
 .small.status-dispositivo {
@@ -127,8 +134,19 @@
 
 .openGraph:hover .card, 
 .activeCard {
-    border: 2px solid #c7911d87;
     transition: all ease .3s;
+    transform: scale(1.07);
+    border: 2px solid #a6a6a6 !important;
+}
+
+.redCard {
+    box-shadow: 0 0 10px 0.1px
+    rgba(223, 0, 0, 0.61) !important;
+}
+
+.attentionCard {
+    box-shadow: 0 0 10px 0.1px
+    rgba(255, 106, 17, 0.61) !important;
 }
 
 .openGraph .card{
@@ -150,3 +168,4 @@ input {
 .infoSistema .btn {
     width: 100%;
 }
+

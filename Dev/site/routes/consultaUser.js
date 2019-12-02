@@ -138,4 +138,24 @@ router.post('/informacaoComponentes', (req, res, next) => {
 
 });
 
+// ALTERAÇÃO DE SENHA
+router.post('/alterarSenha', function (req, res, next) {
+
+    var idClient = req.body.idCliente;
+    var senha = req.body.password;
+
+    let querystring = `UPDATE Client set 
+         pswd = '${senha}'
+          where idClient = ${idClient};`
+
+    return new Promise((resolve, reject) => {
+        Database.query(querystring).then(results => {
+            console.log(results);
+            res.status(200).send(results.recordset);
+        }).catch(error => {
+            res.status(500).send(error);
+        });
+    });
+
+});
 module.exports = router;
