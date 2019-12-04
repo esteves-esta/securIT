@@ -17,6 +17,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <!-- biblioteca Swall - alerts-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <style>
+        #login-page {
+            height: 100vh;
+        }
+    </style>
 
 <body>
     <div id="login-page">
@@ -80,7 +85,7 @@
         console.log("chama redefinir");
         var formRedefinir = $("#redefinir").serialize();
         console.log(formRedefinir);
-      
+
         $.ajax({
             url: "../email/enviarEmail",
             type: 'post',

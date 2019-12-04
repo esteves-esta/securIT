@@ -24,6 +24,7 @@
         href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.min.css">
     <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
+
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
     <link href="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/jqvmap.min.css" rel="stylesheet">
@@ -32,11 +33,8 @@
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet" />
     <!-- biblioteca Swall - alerts-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
-   
+
+
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/estilo.css">
@@ -340,14 +338,19 @@
     <!-- /#right-panel -->
 
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!-- Scripts -->
-
+    <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
     <script src="assets/js/main.js"></script>
 
+    <!-- Scripts -->
     <!--  Chart js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.bundle.min.js"></script>
     <!-- <script src="assets/js/init/chartjs-init.js"></script> -->
+
 
 
     <script type="text/javascript">
@@ -356,31 +359,6 @@
             await verComponentes();
             await atualizarGrafico();
             await validarCores();
-        }
-
-        function validarCores() {
-            $('.openGraph').each(function () {
-
-                const componente = $(this).attr('class').split(' ')[1];
-
-                let valorComponente = $(this).find(".texto-componentes").children()[1].innerText;
-                let valor = valorComponente.replace('%', '');
-                let card = $(this).children(".card");
-                console.log(valor);
-                if (valor >= 90) {
-                    card.removeClass('attentionCard');
-                    card.addClass('redCard');
-                } else if (valor >= 80) {
-                    card.removeClass('redCard');
-                    card.addClass('attentionCard');
-                } else {
-                    console.log('30');
-                    card.removeClass('attentionCard');
-                    card.removeClass('redCard');
-
-                }
-            });
-            setTimeout(validarCores, 1000);
         }
 
         function validarCores() {
