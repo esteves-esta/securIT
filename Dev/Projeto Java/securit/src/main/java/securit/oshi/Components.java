@@ -145,38 +145,28 @@ public class Components {
         return hd;
     }
     
-    public Color validateCPU(Integer cpu){
-        if(cpu > 85){
+      
+    public Color validateComponente(Integer componente, Integer nome){
+        String limiteNomes[] = {"Cpu", "Memoria Ram", "Disco Rígido"};
+        Integer limitesAmarelo[] = {53, 55, 56};
+        Integer limitesVermelho[] = {76, 78, 79};
+        if(componente >= limitesVermelho[nome]){
             mensagem.sendMessage(
-                    String.format("CPU do sistema %s está em %d%% ", sistema, cpu),
-                    SlackEmoji.EMOJI_WARNING);
-            return Color.red;
-        } else {
-            return Color.BLACK;
-        }
-    }
-    
-    public Color validateMemory(Integer memory){
-        if(memory > 85){
-            mensagem.sendMessage(
-                    String.format("Memória do sistema %s está em %d%% ", sistema, memory),
-                    SlackEmoji.EMOJI_ATTENTION);
-            return Color.red;
-        } else {
-            return Color.BLACK;
-        }
-    }
-    
-    public Color validateDisk(Integer disk){
-        if(disk > 85){
-            mensagem.sendMessage(
-                    String.format("Disco do sistema %s está em %d%% ", sistema, disk),
+                    String.format("%s do sistema %s está em %d%% ", limiteNomes[nome], sistema, componente),
                     SlackEmoji.EMOJI_DOUBLE_ATTENTION);
             return Color.red;
-        } else {
+        } 
+        else  if(componente >= limitesAmarelo[nome]){
+            mensagem.sendMessage(
+                    String.format("%s do sistema %s está em %d%% ", limiteNomes[nome], sistema, componente),
+                    SlackEmoji.EMOJI_WARNING);
+            return Color.ORANGE;
+        }
+        else {
             return Color.BLACK;
         }
     }
+
     
     public void getProcess() throws Exception {
         

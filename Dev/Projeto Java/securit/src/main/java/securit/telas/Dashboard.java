@@ -167,13 +167,13 @@ public class Dashboard extends javax.swing.JFrame {
        lbMemTotal.setText(comp.getTotalMemory());
        lbMemDisponivel.setText(comp.getUsedMemory());
     }
-    
+  
     private void setColor(){
-        lblCPU.setForeground(comp.validateCPU(cpu));
-        lblMemory.setForeground(comp.validateMemory(memory));
-        lblDisk.setForeground(comp.validateDisk(disk));
+        lblCPU.setForeground(comp.validateComponente(cpu, 0));
+        lblMemory.setForeground(comp.validateComponente(memory, 1));
+        lblDisk.setForeground(comp.validateComponente(disk, 2));
     }
-    
+ 
     private void getGraph(){
         cg = cpuGraph.getGraph(System.currentTimeMillis(), cpu);
         mg = memoryGraph.getGraph(System.currentTimeMillis(), memory);
