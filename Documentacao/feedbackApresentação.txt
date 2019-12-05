@@ -1,26 +1,31 @@
-Deixar as coisas abertas
-
-nao esquecer dos detalhes logs e zendesk 
-
-2 notebooks de backup
 
 
-verificar user stories 1 falta pra que *
+Feedback Aapresentação:
 
-arrumar partes em ingles da aplicação *
- web
+	Dicas pra apresentação:
+          ============================
+	- Deixar tudo aberto e pronto
+	- 2 notebooks de backup
+	- mostrar power BI sem prints
+	- mostrar slack sem prints
+	- mostrar logs!
+	- mostrar Zendesk
+	- terminar a demo e ir direto pra conclusão e finalização.
 
-logo das empresas sumiu no fundo amarelo, levar os logos pro final ===== OK
+	Melhorias (A FAZER):
+          ============================
+	- arrumar partes em ingles da aplicação WEB*
+ 
 
-remover storyboard ===== OK
+	Melhorias (FEITO):
+           ============================
+	- Verificar user stories 1 falta fim da frase ===== Ok
+	- Logo das empresas deixar no slide final ===== OK
+	- remover storyboard ===== OK
+	- Deixar 1 só bpmn ===== OK
+	-  Remover indicadores de alerta ==== OK
 
-deixar 1 só bpmn ===== OK
 
-qual utilidade dos slides indicadores de alerta? se for o caso, remover. ==== OK
 
-mostrar power BI sem prints
 
-mostrar slack sem prints
-
-terminar com a demo - sair da demo pra conclusão.
 
