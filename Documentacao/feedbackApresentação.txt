@@ -1,0 +1,26 @@
+Deixar as coisas abertas
+
+nao esquecer dos detalhes logs e zendesk 
+
+2 notebooks de backup
+
+
+verificar user stories 1 falta pra que *
+
+arrumar partes em ingles da aplicação *
+ web
+
+logo das empresas sumiu no fundo amarelo, levar os logos pro final ===== OK
+
+remover storyboard ===== OK
+
+deixar 1 só bpmn ===== OK
+
+qual utilidade dos slides indicadores de alerta? se for o caso, remover. ==== OK
+
+mostrar power BI sem prints
+
+mostrar slack sem prints
+
+terminar com a demo - sair da demo pra conclusão.
+
