@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+  a {
+    color: #666;
+    font-size: 14px;
+    display: block;
+  }
+  .logo {
+    width: 70%;
+   
+  }
+  .login-title {
+    flex-basis: 100%;
+  }
+  #login-page {
+    display: flex;
+  }
+  .login {
+    width: 30%;
+    
+    background: #FFF;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+  }
+  .login a {
+    margin-top: 25px;
+  }
+  .form-login label {
+    text-align: left;
+    font-size: 13px;
+    margin-top: 5px;
+    display: block;
+    color: #666;
+  }
+  .input-text,
+  .input-password {
+    width: 100%;
+    background: #DDD;
+    border-radius: 4px;
+    margin: 4px 0;
+    padding: 10px;
+    float: left;
+    display: flex;
+    margin-bottom: 15px;
+    
+  }
+  
+  .icon {
+    padding: 4px;
+    color: #666;
+    min-width: 30px;
+    text-align: center;
+  }
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+    border: none;
+  }
+  button{
+    width: 100%;
+    border: 0;
+    border-radius: 25px;
+    padding: 14px;
+    background: #c59220;
+    color: #FFF !important;
+    font-weight: bold !important;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+  
+  }
+  input[type="submit"] {
+    width: 70%;
+    border: 0;
+    border-radius: 25px;
+    padding: 14px;
+    background: #c59220;
+    color: #FFF;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  
+.background {
+    background: url(../../images/monitoracao.png) center no-repeat;
+    width: 70%;
+    padding: 40px;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+    align-content: center;
+    flex-direction: row;
+    filter:drop-shadow(0.1);
+     /* filter: brightness(0.8); 
+    -webkit-filter: brightness(0.8);
+     -moz-filter: brightness(0.8);
+      -ms-filter: brightness(0.8);
+       -o-filter: brightness(0.8); */
+    
+  }
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+  .background h1 {
+    max-width: 420px;
+    color: #FFF;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+    font-size: xx-large;
+  }
+  .background p {
+    
+    max-width: 650px;
+    color: #DDD;
+    font-size: unset;
+    text-align: right;
+    padding: 0;
+    margin: 15px 0 0 0;
+  }
+  
+  a{
+      
+      text-decoration: none;
+      color: rgb(77, 70, 70);
+      font-weight: bold;
+       text-decoration: none;
+  
+  }
+  
+  a:hover{
+      color:  #c59220;
+  }
+  
+  .alinhar{
+      display: flex;
+      flex-direction: column;
+  }
+  .center{
+    margin-left: 35%;
+  }
+  

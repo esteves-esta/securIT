@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Arial'
+}
+
+a {
+  color: #666;
+  font-size: 14px;
+  display: block;
+}
+.logo {
+  width: 70%;
+}
+.login-title {
+  flex-basis: 100%;
+}
+#login-page {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+
+.login {
+  width: 30%;
+  background: #FFF;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.background {
+  width: 70%;
+  padding: 40px;
+  background: linear-gradient(60deg, rgba(11, 121, 155, 0.253), #060606), 
+  url(../../images/monitoracao.png) center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  filter:drop-shadow(0.1);
+}
+
+	@media only screen and (max-width: 1000px) {
+    /*CELULARES*/
+  .login, .background  {
+    width: 50%;
+  }
+}
+
+	@media only screen and (max-width: 650px) {
+    /*CELULARES*/
+    
+    .login, .background  {
+      width: 100%;
+    }
+    .logo {
+      width: 30%;
+    }
+    #login-page {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    .background {
+      order: 1;
+    }
+
+    .login {
+      order: 2;
+    }
+}
+
+.login a {
+  margin-top: 25px;
+}
+.form-login label {
+  text-align: left;
+  font-size: 13px;
+  margin-top: 5px;
+  display: block;
+  color: #666;
+}
+.input-text,
+.input-password {
+  width: 100%;
+  background: #DDD;
+  border-radius: 4px;
+  margin: 4px 0;
+  padding: 10px;
+  float: left;
+  display: flex;
+  margin-bottom: 15px;
+  
+}
+
+.icon {
+  padding: 4px;
+  color: #666;
+  min-width: 30px;
+  text-align: center;
+}
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+  border: none;
+}
+
+button{
+  width: 100%;
+  border: 0;
+  border-radius: 25px;
+  padding: 14px;
+  background: #c59220;
+  color: #FFF !important;
+  font-weight: bold !important;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#formlogin, 
+input[type="submit"] {
+  width: 300px;
+}
+
+input[type="submit"] {
+  border: 0;
+  border-radius: 6px;
+  padding: 12px;
+  background: #c59220;
+  color: #FFF;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+.background h1 {
+  color: #FFF;
+  text-align: right;
+  padding: 0;
+  margin: 0;
+  font-size: xx-large;
+  font-weight: 800;
+  padding-bottom: 25px;
+}
+.background p {
+  color: #DDD;
+  font-size: unset;
+  text-align: right;
+  padding: 0;
+  line-height: 1.5em
+}
+
+a{
+    text-decoration: none;
+    color: rgb(77, 70, 70);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover{
+    color:  #c59220;
+    text-decoration: none;
+}
+
+.alinhar{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
