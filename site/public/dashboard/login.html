@@ -5,20 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SecurIT | Login </title>
-    <link rel="shortcut icon" href="images/faviconSecurit.png">
 
+    <title>SecurIT | Login </title>
+
+    <link rel="shortcut icon" href="images/faviconSecurit.png">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+
+    <!-- CSS stylesheet -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
     <!-- AJAX -- biblioteca usada para enviar formulario ou coisas do frontend pro backend - PEGUEI NO W3SCHOOLS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <!-- CSS stylesheet -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
     <!-- biblioteca Swall - alerts-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-    <link rel="stylesheet" href="assets/css/login.css">
+    <script src="js/logout.js"></script>
     <style>
         #login-page {
             height: 100vh;
@@ -62,94 +70,6 @@
             </div>
         </div>
     </div>
-
-    <script>
-
-
-        function verificarDados(e) {
-            e.preventDefault();
-
-            formlogin.email.value = formlogin.email.value.toLowerCase();
-            formlogin.password.value = formlogin.password.value.toLowerCase();
-
-
-            if (email.value == "" || password.value == "") {
-                swal({
-                    title: "Aviso",
-                    text: "Preencha os campos corretamente!",
-                    type: "warning",
-                    confirmButtonClass: "btn-danger",
-                    closeOnConfirm: false,
-                    dangerMode: true,
-                    confirmButtonClass: "btn-danger",
-                    closeOnClickOutside: true,
-                });
-                email.focus();
-                return false;
-            } else {
-
-                logar();
-
-            }
-        }
-
-
-        function logar() {
-            var dados = $("#formlogin").serialize();
-            console.log(dados);
-
-            $.ajax({
-                url: "../login",
-                type: 'post',
-                data: dados
-
-            }).done(function (resposta) {
-                console.log("res OK");
-                if (resposta.length > 0) {
-                    sessionStorage.idClient = resposta[0].idClient;
-                    sessionStorage.name = resposta[0].name;
-                    sessionStorage.empresa = resposta[0].compName;
-
-                    console.log(resposta);
-                    var resu = verificarAutenticacao();
-
-                }
-                else {
-                    swal({
-                        title: "Aviso",
-                        text: "Informações de login não encontradas!",
-                        type: "warning",
-                        confirmButtonClass: "btn-danger",
-                        closeOnConfirm: false,
-                        dangerMode: true,
-                        confirmButtonClass: "btn-danger",
-                        closeOnClickOutside: true,
-                    });
-                }
-            });
-        }
-
-
-        function verificarAutenticacao() {
-            var nome = sessionStorage.name;
-            var id = sessionStorage.idClient;
-            var empresa = sessionStorage.compName;
-
-
-            if (nome != undefined && id != undefined) {
-                irDashboard();
-            } else {
-
-
-                return false;
-            }
-        }
-
-        function irDashboard() {
-            location.href = 'index.html';
-        }
-
-    </script>
 
     <!-- Start of securithelp Zendesk Widget script -->
     <script id="ze-snippet"

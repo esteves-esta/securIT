@@ -1,26 +1,27 @@
-const express = require('express');
+import express from 'express';
+import deletar from '../querys/delete';
+
 const router = express.Router();
-const Database = require('../Database');
-const config = require('../config');
 
 router.post('/', (req, res, next) => {
     var sistema = req.body.idDispositivo;
 
-    carregaTabela(sistema, res);
+    excluirDispositivo(sistema, res);
 });
 
+async function excluirDispositivo(selecionado, res) {
 
-//FUNÇÃO PRA CARREGAR OS DADOS NA TBELA
-function carregaTabela(selecionado, res) {
-
-    let querystring = `delete from Device where idDevice = ${selecionado}`;
-    return new Promise((resolve, reject) => {
-        Database.query(querystring).then(results => {
-
-            res.sendStatus(201);
-        }).catch(error => {
-            res.status(500).send(error);
-        });
-    });
+    try {
+        let result = await deletar('Device', `idDevice = ${selecionado}`);
+        if (result) {
+            res.sendStatus(204);
+        } else {
+            res.sendStatus(500);
+        }
+    }
+    catch (error) {
+        res.status(500).send(error);
+    }
 }
+
 module.exports = router;

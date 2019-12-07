@@ -1,27 +1,22 @@
-const express = require('express');
+import express from 'express';
+import consulta from '../querys/select';
+
 const router = express.Router();
-const Database = require('../Database');
-const config = require('../config');
 
-router.post('/', (req, res, next) => {
+router.post('/', async (req, res, next) => {
 
-    var email = req.body.email;
-    var senha = req.body.password;
-    logar(email, senha, res);
+    const email = req.body.email;
+    const senha = req.body.password;
+
+    const filter = `where email='${email}' and pswd='${senha}'`;
+
+    const resposta = await consulta('*', 'Client', filter);
+    if (resposta) {
+        res.send(resposta);
+        console.log(resposta);
+    } else {
+        res.sendStatus(500);
+    }
 });
-
-function logar(email, senha, res) {
-
-
-    let querystring = `Select * from Client where email= '${email}' and pswd= '${senha}'`
-    return new Promise((resolve, reject) => {
-        Database.query(querystring).then(results => {
-            console.log(results.recordset);
-            res.send(results.recordset);
-        });
-
-    })
-}
-
 
 module.exports = router;
