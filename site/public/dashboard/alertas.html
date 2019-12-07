@@ -259,7 +259,11 @@
                         tabelaContainer.style.display = "block";
                         cardConteudo.style.display = "none";
 
-                        $('#alertaTabela').DataTable();
+                        $('#alertaTabela').dataTable({
+                            "language": {
+                                "url": "//cdn.datatables.net/plug-ins/1.10.19/i18n/Portuguese-Brasil.json"
+                            }
+                        });
                     }
                     else {
                         card.style.display = "block";

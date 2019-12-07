@@ -220,7 +220,7 @@
     <script src="assets/js/lib/data-table/buttons.html5.min.js"></script>
     <script src="assets/js/lib/data-table/buttons.print.min.js"></script>
     <script src="assets/js/lib/data-table/buttons.colVis.min.js"></script>
-    <script src="assets/js/init/datatables-init.js"></script>
+    <!-- <script src="assets/js/init/datatables-init.js"></script> -->
 
     <!-- Start of securithelp Zendesk Widget script -->
     <script id="ze-snippet"
@@ -327,6 +327,8 @@
                 tabelaContainer.style.display = "block";
                 cardConteudo.style.display = "none";
                 card.style.display = "block";
+
+
             }
             else {
                 card.style.display = "block";
@@ -340,7 +342,11 @@
 
     function carrega() {
         carregaTabela(sistema.value);
-        $('#tabele').DataTable();
+        $('#tabele').dataTable({
+            "language": {
+                "url": "//cdn.datatables.net/plug-ins/1.10.19/i18n/Portuguese-Brasil.json"
+            }
+        });
     }
 
 
